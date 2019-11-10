@@ -1,0 +1,273 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-form-heading">Prenota Ora</h2>
+            <!-- <h3 class="section-form-subheading text-muted"></h3> -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form>
+
+                <!-- PASSEGGIERI -->
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <h3 class="section-form-heading">Info Passeggieri</h3>
+                    </div>
+
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer01">Nome e Cognome</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01"
+                            placeholder="Nome e Cognome" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer02">Email</label>
+                        <input type="email" class="form-control is-valid" id="validationServer02" placeholder="Email"
+                            required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServerUsername">Numero di cellulare</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="validationServerUsername"
+                                placeholder="+39 346 000 1234" aria-describedby="inputGroupPrepend3" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row ">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer03">Persone</label>
+                        <input type="number" min="1" max="99" class="form-control" id="validationServer03"
+                            placeholder="Numero di Persone" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer04">Bagagli a Mano</label>
+                        <input type="number" min="1" max="99" class="form-control" id="validationServer04"
+                            placeholder="Bagagli a Mano" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer05">Bagagli da Stiva</label>
+                        <input type="number" min="1" max="99" class="form-control" id="validationServer05"
+                            placeholder="Bagagli da Stiva" required>
+                    </div>
+                </div>
+
+
+                <!-- ARRIVO -->
+                <div class="form-row ">
+                    <div class="col-md-12">
+                        <h3 class="section-form-heading">Arrivo a Londra</h3>
+                        <h4 class="section-form-subheading text-muted mb-2">Indica nei seguenti campi i dettagli del
+                            tuo volo per Londra, così ci faremo trovare puntuali all'aeroporto da te indicato.</h4>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer03">Data di Arrivo</label>
+                        <input type="date" class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Data di Arrivo" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Ora di Arrivo</label>
+                        <input type="time" class="form-control form-control-lg" id="validationServer04"
+                            placeholder="Bagagli a Mano" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer03">Aeroporto di Partenza</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Aeroporto di Partenza">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer04">Aeroporto di Arrivo</label>
+
+                        <select id="airport" class="form-control form-control-lg">
+                            {% for airport in site.airports %}
+                            <option value="{{airport.name}}">{{airport.name}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer04">Compagnia e numero del volo</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer04"
+                            placeholder="EasyJet - EZY1234" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationServer03">Indirizzo del Hotel (o dell'appartamento)</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer03" placeholder=""
+                            required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationServer03">Note Aggiuntive</label>
+                        <textarea class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Note Aggiuntive">
+                                        </textarea>
+                    </div>
+                </div>
+
+                <!-- RITORNO -->
+                <div class="form-row ">
+                    <div class="col-md-12">
+                        <h3 class="section-form-heading">RITORNO DA LONDRA</h3>
+                        <h4 class="section-form-subheading text-muted">Indica nei seguenti campi i dettagli del tuo
+                            volo di ritorno da Londra (o altre località del Regno Unito), ti portermo dal tuo
+                            hotel/appartamento all'aeroporto da te indicato.</h4>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer03">Data di Partenza</label>
+                        <input type="date" class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Data di Arrivo" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Ora di Partenza</label>
+                        <input type="time" class="form-control form-control-lg" id="validationServer04"
+                            placeholder="Bagagli a Mano" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer03">Aeroporto di Partenza</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Aeroporto di Partenza">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer04">Aeroporto di Arrivo</label>
+
+                        <select id="airport" class="form-control form-control-lg">
+                            {% for airport in site.airports %}
+                            <option value="{{airport.name}}">{{airport.name}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationServer04">Compagnia e numero del volo</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer04"
+                            placeholder="EasyJet - EZY1234" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationServer03">Indirizzo del Hotel (o dell'appartamento)</label>
+                        <input type="text" class="form-control form-control-lg" id="validationServer03" placeholder=""
+                            required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationServer03">Note Aggiuntive</label>
+                        <textarea class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Note Aggiuntive">
+                                            </textarea>
+                    </div>
+                </div>
+
+                <!-- TOUR -->
+                <div class="form-row ">
+                    <div class="col-md-12">
+                        <h3 class="section-form-heading">ESCURSIONI E TOUR</h3>
+                        <h4 class="section-form-subheading text-muted">I seguenti campi pur se opzionali, <b>sono
+                                altamente consigliati</b>.</h4>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Primo Tour</label>
+
+                        <select id="tour" class="form-control form-control-lg">
+                            {% for tour in site.tours %}
+                            <option value="{{airport.name}}">{{tour.name}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Data primo Tour</label>
+                        <input type="date" class="form-control form-control-lg" id="validationServer04">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Secondo Tour</label>
+
+                        <select id="tour" class="form-control form-control-lg">
+                            {% for tour in site.tours %}
+                            <option value="{{airport.name}}">{{tour.name}}</option>
+                            {% endfor %}
+
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationServer04">Data secondo Tour</label>
+                        <input type="date" class="form-control form-control-lg" id="validationServer04">
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationServer03">Note Aggiuntive</label>
+                        <textarea class="form-control form-control-lg" id="validationServer03"
+                            placeholder="Note Aggiuntive">
+                                                    </textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-1">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" required>
+                    </div>
+                    <div class="col-md-11">
+                        <label class="form-check-label" for="invalidCheck3">
+                            Ho letto l'informativa privacy e do il mio consenso al trattamento dei miei dati in
+                            merito alla mia richiesta commerciale.
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="col-md-12">
+
+
+                        <label for="validationServer04">Dove ci hai conosciuto?</label>
+
+                        <select id="extra" class="form-control form-control-lg">
+                            <option selected>Indica dove ci hai conosciuto</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="TripAdvisor">TripAdvisor</option>
+                            <option value="Twitter">Twitter</option>
+                            <option value="Web">Web</option>
+                            <option value="Passa parola">Passa parola</option>
+                            <option value="Cliente">Ero già cliente</option>
+                        </select>
+
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3"></div>
+                    <div class="col-md-4 mb-3">
+                        <button class="btn btn-primary text-center form-submit" type="submit">Prenota Ora</button>
+                    </div>
+                    <div class="col-md-4 mb-3"></div>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-md-2"></div>
+    </div>
+
+
+</div>
+</section>

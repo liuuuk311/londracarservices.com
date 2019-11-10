@@ -1,0 +1,49 @@
+url: 127.0.0.1:4000
+baseurl: 
+
+# Site settings
+title: Londracarservices
+email: info@londracarservices.com 
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+review:
+  - title: Transfer per Londra
+    name: Marco G.
+    text: Servizio eccellente e puntualissimo, eravamo un gruppo di 9 persone ed abbiamo avuto a disposizione un pulmino nuovo e molto comodo. Raccomandatissimo.
+    link: https://www.tripadvisor.com/ShowUserReviews-g186338-d2489854-r724812244-Londra_Car_Services-London_England.html
+    star: 5
+  - title: Capodanno a Londra
+    name: Salvatore B.
+    text: Claudio è stato puntuale, gentile, discreto. Sono arrivata con tre amici la sera di Capodanno e appena atterrati siamo stati subito contattati sul mio numero di telefono.Il costo della corsa è onesto. Prenoterei nuovamente, se ne avessi bisogno.
+    link: https://www.tripadvisor.com/ShowUserReviews-g186338-d2489854-r722869765-Londra_Car_Services-London_England.html
+    star: 5
+  - title: Ottimo servizio
+    name: Alessandra M.
+    text: Abbiamo usufruito del servizio ad agosto, nonostante il volo in ritardo ci ha aspettato. Servizio puntuale, ottimo nelle comunicazioni (in italiano), raggiungibile facilmente anche con whatsapp! Se torniamo a Londra sicuramente lo richiameremo
+    link: https://www.tripadvisor.com/ShowUserReviews-g186338-d2489854-r702043392-Londra_Car_Services-London_England.html
+    star: 4
+
+airports:
+  - name: Stansted
+  - name: Gatwick
+  - name: Heathrow
+  - name: Luton
+  - name: London City
+  - name: Southend
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/LondraCarServ
+  - title: facebook
+    url: https://www.facebook.com/londracarservices/
+
+
+# Postal address (add as many lines as necessary)
+# address:
+#   - line: 3481 Melrose Place
+#   - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+permalink: pretty
